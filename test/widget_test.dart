@@ -8,9 +8,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_app/main.dart';
+import 'package:flutter_app/flutter/main.dart';
+import 'package:flutter_app/dart/test01.dart';
 
 void main() {
+//  runAPPMain();
+  runDartMain();
+}
+/*
+dart语言主入口
+ */
+void runDartMain(){
+  print('sssss');
+  var t=new test01();
+  t.t();
+}
+/*
+ *运行App主入口
+ */
+void runAPPMain(){
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(MyApp());
