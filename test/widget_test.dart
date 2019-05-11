@@ -12,8 +12,8 @@ import 'package:flutter_app/flutter/main.dart';
 import 'package:flutter_app/dart/test01.dart';
 
 void main() {
-//  runAPPMain();
-  runDartMain();
+  runAPPMain();
+//  runDartMain();
 }
 /*
 dart语言主入口
