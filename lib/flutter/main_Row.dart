@@ -18,14 +18,68 @@ class MyApp extends StatelessWidget {
           appBar: new AppBar(
             title: new Text('gridview'),
           ),
-          body:new Row(
-            children: <Widget>[
-              new Text('sssss'),
-              new Text('sssss'),
-              new Text('sssss')
-            ],
-          ),
+          body:new myRow2(),
       ),
+    );
+  }
+}
+class myRow2 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return new Row(
+      children: <Widget>[
+        new RaisedButton(
+          onPressed: (){//单机事件
+            print('>]--------');
+          },
+          child: new Text('green1'),
+          color: Colors.green,
+        ),
+        new RaisedButton(
+          onPressed: (){},//空的单机事件
+          child: new Text('amber'),
+          color: Colors.amber,
+        ),
+        new RaisedButton(
+          onPressed: (){},//空的单机事件
+          child: new Text('lightBlue'),
+          color: Colors.lightBlue,
+        )
+      ],
+    );
+  }
+}
+/*
+ */
+class myRow1 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return new Row(
+      children: <Widget>[
+        new Expanded(
+          child:new RaisedButton(
+            onPressed: (){//单机事件
+              print('>]--------');
+            },
+            child: new Text('green'),
+            color: Colors.green,
+          ),
+        ),
+        new Expanded(
+            child:new RaisedButton(
+              onPressed: (){},//空的单机事件
+              child: new Text('amber'),
+              color: Colors.amber,
+            )
+        ),
+        new Expanded(
+            child:new RaisedButton(
+              onPressed: (){},//空的单机事件
+              child: new Text('lightBlue'),
+              color: Colors.lightBlue,
+            )
+        ),
+      ],
     );
   }
 }
