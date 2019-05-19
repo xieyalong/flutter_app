@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
+/*
+继承系统的modle
+ */
 class CountModel extends Model{
   int _count=0;
-//_count属性的get，返回_count
+//_count属性的get方法，返回_count
   int get count=>_count;
+  //页面调用的函数
   void callbackCountWidget(){
     _count++;
     print('>]CountModel.count=$_count');
