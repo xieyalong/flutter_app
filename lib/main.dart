@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 //import 'flutter/PageTextField.dart';
 import 'flutter/PageStatefulWidgetBindingData.dart';
+import 'flutter/PageStatefulWidget2.dart';
+import 'flutter/PageFormField.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -12,7 +14,7 @@ class MyApp extends  StatelessWidget{
         appBar: new AppBar(
           title: new Text('标题'),
         ),
-          body:PageStatefulWidgetBindingData()
+          body:Home(),
       ),
     );
   }
@@ -21,16 +23,7 @@ class Home extends  StatelessWidget{
   @override
   Widget build(BuildContext context) {//此时的context=MyApp
     return  new Scaffold(
-        body:Column(
-          children: <Widget>[
-            RaisedButton(
-              onPressed: (){
-               // Navigator.push(context, MaterialPageRoute(builder: (context)=>PageStatefulWidget()));
-              },
-              child: Text('tz'),
-            )
-          ],
-        )
+        body:PageFormField()
     );
   }
 }
