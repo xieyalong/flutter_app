@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'User.dart';
+import 'Message.dart';
 class page2 extends StatelessWidget{
   var str1;
   String str2;
@@ -18,9 +19,10 @@ class page2 extends StatelessWidget{
               new RaisedButton(
                   child: new Text('返回'),
                   onPressed: (){
-                    //返回不需要Builder此时的context是page2
+                    //返回不需要Builder此时的context是page2 dfdf是的方法对方
                     print('>]context=$context');
                     Navigator.pop(context);
+                    click('page2');
                   }
               ),
               new Text('接收值:str1=$str1--str2=$str2--user.name=${user.name}'),

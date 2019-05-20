@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'page2.dart';
 import 'User.dart';
+import 'Message.dart';
 class page1{
-  BuildContext context;
-  page1(BuildContext context){
-    this.context=context;
+  page1(){
   }
   Widget initPage(){
     //跳转时Navigator需要Builder,但MyApp没有Builder
