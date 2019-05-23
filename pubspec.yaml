@@ -24,11 +24,13 @@ dependencies:
   cupertino_icons: ^0.1.2
   #"^"表明使用小版本的更新，保存会自动下载这个需要的包
   scoped_model:
+  intl:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 scoped_model:
+intl:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
