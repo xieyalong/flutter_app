@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'flutter/PageTextField.dart';
-import 'flutter/PageStatefulWidgetBindingData.dart';
-import 'flutter/PageStatefulWidget2.dart';
-import 'flutter/PageMinWidget.dart';
-import 'flutter/PageDialog.dart';
+import 'flutter/PageStream1.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,7 +21,7 @@ class Home extends  StatelessWidget{
   @override
   Widget build(BuildContext context) {//此时的context=MyApp
     return  new Scaffold(
-        body:PageDialog()
+        body:PageStream1()
     );
   }
 }
