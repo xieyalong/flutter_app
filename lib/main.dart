@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'flutter/PageStream1.dart';
+import 'flutter/PageHttp.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +21,7 @@ class Home extends  StatelessWidget{
   @override
   Widget build(BuildContext context) {//此时的context=MyApp
     return  new Scaffold(
-        body:PageStream1()
+        body:PageHttp()
     );
   }
 }
