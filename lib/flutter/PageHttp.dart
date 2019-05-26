@@ -17,24 +17,36 @@ class PageHttpState extends State<PageHttp>{
         RaisedButton(
             child: Text('http'),
             onPressed: (){
-              get();
+              get(new HttpCallback(){
+                onData(){
+
+              }
+              });
             }
         ),
       ],
     );
   }
-  void  get() async{
+  void  get(HttpCallback cb, [Map map]) async{
     String url="http://hq.sinajs.cn/list=sh601006";
     var response=await http.get(url);
     //状态码
     print(response.statusCode);
     //数据
     print(response.body);
+    cb.onData(response.body);
+  }
 
-  }
-  void post()async{
-    http.post(url)
-  }
+}
+//typedef VoidCallback = void Function(){
+//
+//};
+class HttpCallback{
+
+  HttpCallback();
+  void onData(var data)async{}
+
+
 }
 
 
