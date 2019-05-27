@@ -25,9 +25,9 @@ class PageDialogState extends State<PageDialog>{
                   child: Text('关闭按钮'),
                   onPressed: (){
                     //关闭dialog并返回数据
-                    UserModel u=new UserModel();
-                    u.name="谢亚龙";
-                    Navigator.pop(context,u);
+//                    UserModel u=new UserModel();
+//                    u.name="谢亚龙";
+//                    Navigator.pop(context,u);
                   }
               )
             ],

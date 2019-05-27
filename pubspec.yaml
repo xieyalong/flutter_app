@@ -29,6 +29,7 @@ dependencies:
   json_annotation:
   json_serializable:
   crypto:
+#    shared_preferences:
 
 dev_dependencies:
   flutter_test:
@@ -39,6 +40,7 @@ intl:
   json_annotation:
   json_serializable:
   crypto:
+#    shared_preferences:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec

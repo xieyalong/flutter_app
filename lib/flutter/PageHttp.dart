@@ -70,8 +70,11 @@ class PageHttpState extends State<PageHttp>{
         'jdHWgiBofEhAQ0x0lShWwvrr4uuISnqJSbkvvMf/RzXhlF4ZhUzvX2bD02Vk9szPfPvqe+sWIPtB'+
         'Mggg7X/s61OGekjA0Rfotb5pGDSpElEVjvEbcnx5HkcZqPK62tjdSp5ffj4M9uhxkkw=';
     String url="https://omoapi.yuanxinkangfu.com/capp/api/api.html";
-
-    var response=await http.post(url, body: url_data);
+    url_data='{"id": 1,"name": "Pest_Rose","email": "Pest_Rose@learnku.com", "avatar": "http://larabbs_upgrade.test/uploads/images/avatars/201904/23/1_1556002565_tiq0V2jMXY.jpg","introduction": "Saepe est nulla tempora ab.","bound_phone": true,"bound_wechat": false,"last_actived_at": "2019-04-08 18:23:52","created_at": "2019-04-08 18:23:52","updated_at": "2019-04-23 15:08:52"}';
+      url="192.168.0.149/api/user";
+    Map<String, String> headers=new Map();
+    headers['Authorization']='Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhYmJzX3VwZ3JhZGUudGVzdCIsImlhdCI6MTU1NTk0MDE3MSwiZXhwIjoxNTg3NDc2MTcxLCJuYmYiOjE1NTU5NDAxNzEsImp0aSI6IlBiNkk1czNpMDMzb1ljdm4iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._O2cnIoNVR9dwbDPCXNMu9q5LocrrxZfYmIsWOIc9b0';
+    var response=await http.post(url,headers: headers,body: url_data);
 //    //状态码
     print(response.statusCode);
 //    //数据

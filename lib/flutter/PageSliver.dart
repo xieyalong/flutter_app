@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'UserModel.dart';
 class PageSliver extends StatelessWidget{
 
-  List<String> data=new UserModel().getData();
+//  List<String> data=new UserModel().getData();
+  List<String> data;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
