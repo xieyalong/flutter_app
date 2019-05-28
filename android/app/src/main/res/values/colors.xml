@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="blue">#336699</color>
+    <color name="gray">#cccccc</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="bg_color">#FFFFFF</color>
+
+    <color name="background_color">#F7F7F7</color>
+
+    <color name="list_item_focus">#f4f5f9</color>
+    <color name="list_item_bg">#ffffff</color>
+    <color name="list_item_bg_focus">#f4f5f9</color>
+
+
+
+    <!--蓝色主色调-->
+    <color name="colorMain">#3299C8</color>
+    <!--添加透明度的主色调-->
+    <color name="colorMainalpha">#993299C8</color>
+    <!--渐变的蓝色-->
+    <color name="startBlue">#4DB3D9</color>
+    <color name="endBlue">#278FC2</color>
+    <!--渐变的青色-->
+    <color name="startChing">#5DCCC8</color>
+    <color name="endChing">#44B5B1</color>
+
+
+    <color name="btn_red_dead_bg">#FAD8D1</color>
+    <color name="btn_red_press_bg">#C95941</color>
+    <color name="btn_white_dead_stroke">#FFCCCC</color>
+    <color name="btn_white_stroke">#ED6648</color>
+    <color name="btn_white_press_stroke">#C95941</color>
+    <color name="btn_white_dead_bg">#FCFCFC</color>
+    <color name="btn_white_press_font">#C95941</color>
+    <color name="btn_white_dead_font">#FFCCCC</color>
+
+
+
+
+    <color name="bg_line_color">#F7F8F9</color>
+    <color name="top_img_pressed_bg">#809092A5</color>
+    <color name="top_text">#333333</color>
+
+
+    <color name="assess_cate_item_bg_color">#ffffff</color>
+    <color name="assess_cate_item_bg_selected_color">#ED6648</color>
+    <color name="assess_cate_item_border_color">#f9f7f3</color>
+    <color name="assess_cate_item_border_selected_color">#ED6648</color>
+    <color name="assess_cate_item_border_selected_color2">#718457</color>
+    <color name="assess_cate_item_bg_selected_color2">#718457</color>
+    <!--分割线-->
+    <color name="c_F1">#F1F1F1</color>
+    <!--字体左边标题-->
+    <color name="c_7C">#7C7C7C</color>
+    <color name="c_70">#707070</color>
+    <!--题颜色-->
+    <color name="c_5C">#5C5C5C</color>
+    <!--主标题 题颜色 16sp-->
+    <color name="c_3">#3A444A</color>
+    <!--字体颜色副标题 佳莉-->
+    <color name="c_9092A5">#9092A5</color>
+    <!--灰色字体 副标题2  佳莉 13sp-->
+    <color name="c_66687A">#66687A</color>
+    <!--字体颜色3 副标题 浅灰色 12sp-->
+    <color name="c_c3c3c3">#c3c3c3</color>
+    <!--灰色字体 佳莉-->
+    <color name="c_E4E4EB">#E4E4EB</color>
+    <!--背景灰色 -->
+    <color name="c_F7">#F7F7F7</color>
+    <!--红色 -->
+    <color name="c_ED6648">#ED6648</color>
+    <color name="c_ED66482">#70ED6648</color>
+    <!-- 主标题 深灰色 -->
+    <color name="c_3A444A">#3A444A</color>
+    <!--边框 -->
+    <color name="c_F5">#F5F5F5</color>
+    <!--背景 分割线-->
+    <color name="c_EDEBE9">#EDEBE9</color>
+
+
+    <!--背景颜色 佳莉-->
+    <color name="c_F7F8F9">#F7F8F9</color>
+
+    <color name="c_767888">#767888</color>
+    <color name="c_888E92">#888E92</color>
+
+    <color name="c_eb7057">#eb7057</color>
+
+    <drawable name="checkbox_default">#ED6648</drawable>
+    <drawable name="checkbox_checked">#ED6648</drawable>
+
+
+
+
+
+
+
+
+    <color name="bar_bg">#4D5C3A</color>
+    <color name="bar_un_selected">#9CB082</color>
+    <color name="bar_selected">#E2F0D6</color>
+
+
+    <color name="default_color">#718457</color>
+    <color name="default_press_color">#607149</color>
+    <color name="default_dead_color">#CCCCCC</color>
+
+    <color name="question_bg">#f6f7f2</color>
+    <color name="question_image_bg">#F2F3F9</color>
+
+
+    <color name="cate_item_focus">#F7F7F7</color>
+    <color name="cate_item_bg">#ffffff</color>
+    <color name="cate_item_bg_focus">#F7F7F7</color>
+
+    <color name="cate_color">#3D3D3D</color>
+
+
+
+
+    <color name="title_color">#000000</color>
+    <color name="subtitle_color">#ACACAC</color>
+
+
+
+</resources>
