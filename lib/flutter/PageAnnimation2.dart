@@ -1,45 +1,33 @@
 import 'package:flutter/material.dart';
-class PageAnnimation extends StatefulWidget{
+class PageAnnimation2 extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
     return new PageAnnimationState();
   }
 }
-class PageAnnimationState extends State<PageAnnimation> with TickerProviderStateMixin{
+class PageAnnimationState extends State<PageAnnimation2> with TickerProviderStateMixin{
   String _text='渐渐变大';
-  //监控状态
   AnimationController _controller;
-  //控制大小
-  Animation _animation;
-  //控制颜色
-  Animation _animationColor;
-  //曲线动画，有动态效果的动画
-  CurvedAnimation _curvedAnimation;
   @override
   void initState() {
     super.initState();
     _controller=new  AnimationController(
-      //动画持续时间
-        duration: Duration(milliseconds: 1000),
+      /*
+        初始值
+       */
+        value: 30.0,
+        //动画最小帧数
+        lowerBound: 30.0,
+        //动画最大帧数
+        upperBound:100 ,
+        //动画持续时间
+        duration: Duration(milliseconds: 3000),
         /*
         作用禁止屏幕外消耗资源,要“with TickerProviderStateMixin”
         this=TickerProviderStateMixin
          */
         vsync: this
     );
-    /*
-    Curves.bounceOut:最大图蹦跶两下在缩小,在缩小放大动画上有效果
-    Curves.bounceIn最小图蹦跶两下在放大，在缩小放大动画上有效果
-    Curves.bounceInOut=bounceIn+bounceOut
-     */
-    _curvedAnimation=CurvedAnimation(parent: _controller, curve: Curves.bounceOut);
-    /*
-     //动画最小帧数
-      //动画最大帧数
-     */
-    _animation=Tween(begin: 30.0,end: 100.0).animate(_curvedAnimation);
-    //颜色动画
-    _animationColor=ColorTween(begin: Colors.red[100],end: Colors.red[900]).animate(_curvedAnimation);
     /*
       运行监听
       每输出一个数字代表一帧
@@ -71,7 +59,6 @@ class PageAnnimationState extends State<PageAnnimation> with TickerProviderState
 
       }
     });
-
   }
   @override
   void dispose() {
@@ -86,13 +73,9 @@ class PageAnnimationState extends State<PageAnnimation> with TickerProviderState
           alignment: Alignment.topRight,
           children: <Widget>[
             IconButton(
-                icon: Icon(Icons.ac_unit,),//,
+                icon: Icon(Icons.ac_unit,color: Colors.red,),
                 //通过_controller.value变化，改变图标的大小
-                iconSize: _animation.value,
-//                iconSize: 100,
-                //通过_animationColor.value 来改变颜色变化
-                color:_animationColor.value ,
-//                color: Colors.red,
+                iconSize: _controller.value,
                 onPressed: (){
 
                 }),

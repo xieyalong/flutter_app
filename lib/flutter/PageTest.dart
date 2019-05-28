@@ -10,8 +10,6 @@ class PageTest extends StatefulWidget{
   }
 }
 class PageTestState extends State<PageTest>{
-  double _top=50;
-  double _left=50;
   @override
 
   @override
@@ -21,19 +19,31 @@ class PageTestState extends State<PageTest>{
           fit: StackFit.loose,
           alignment: Alignment.topRight,
           children: <Widget>[
-            GestureDetector(
-              onLongPressMoveUpdate: (m){
-                //挪动雪花图标的位置
-                _top=m.globalPosition.dy;
-                _left=m.globalPosition.dx;
-                setState(() { });
-              },
-              child: Container(height: double.infinity,width: double.infinity,color: Colors.amber,),
-            ),
+            Container(
+              color: Colors.amber,
+              width: 500,
+              height: 500,
+              child:  AnimatedContainer(
+                duration: Duration(
+                    milliseconds: 10000,
+                    seconds: 40,
+                    days: 10,
+                    hours: 4,
+                    microseconds: 300,
+                    minutes: 50
+                ),
+                color: Colors.red,
+                curve: Curves.easeInCubic,
+                height: 30,
+                width: 30,
+              transform:Matrix4.diagonal3((){})
+              ),
+            )
+           ,
             new Positioned(
-              child:new Icon(Icons.ac_unit,color: Colors.green,),
-              top: _top,
-              left: _left,
+              child:RaisedButton(onPressed: (){},child: Text('aaaaa'),),
+              top: 200,
+              left: 100,
             ),
           ],
         )

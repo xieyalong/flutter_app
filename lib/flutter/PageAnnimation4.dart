@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-class PageAnnimation extends StatefulWidget{
+class PageAnnimation4 extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
     return new PageAnnimationState();
   }
 }
-class PageAnnimationState extends State<PageAnnimation> with TickerProviderStateMixin{
+class PageAnnimationState extends State<PageAnnimation4> with TickerProviderStateMixin{
   String _text='渐渐变大';
   //监控状态
   AnimationController _controller;

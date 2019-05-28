@@ -43,7 +43,7 @@ class Home extends  StatelessWidget{
   @override
   Widget build(BuildContext context) {//此时的context=MyApp
     return  new Scaffold(
-        body:PageAnnimation()
+        body:PageTest()
     );
   }
 }
