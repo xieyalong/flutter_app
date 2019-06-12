@@ -36,7 +36,6 @@ class PageTestState extends State<PageTest>{
                 curve: Curves.easeInCubic,
                 height: 30,
                 width: 30,
-              transform:Matrix4.diagonal3((){})
               ),
             )
            ,

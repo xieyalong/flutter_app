@@ -9,9 +9,6 @@ class MyApp extends  StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('标题'),
-        ),
           body:Home(),
         bottomNavigationBar: BottomNavigationBar(
             currentIndex: 1,
@@ -47,4 +44,4 @@ class Home extends  StatelessWidget{
     );
   }
 }
-//dfdfdfdfdfdfd的士速递所
+
