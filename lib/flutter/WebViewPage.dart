@@ -16,8 +16,6 @@ class WebViewPageState extends State<WebViewPage>{
            title: new Text("Widget webview"),
          ),
          scrollBar: true,
-
     );
   }
-
 }
