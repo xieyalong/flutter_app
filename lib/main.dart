@@ -11,6 +11,9 @@ import 'flutter/Page3Navigator.dart';
 import 'flutter/PassArgumentsScreen.dart';
 import 'flutter/ExtractArgumentsScreen.dart';
 import 'flutter/ScreenArguments.dart';
+import 'flutter/APage.dart';
+import 'flutter/BPage.dart';
+import 'flutter/CPage.dart';
 import 'package:fluro/fluro.dart';
 void main() => runApp(MyApp());
 
@@ -23,6 +26,9 @@ class MyApp extends  StatelessWidget{
         routes: {
           //ExtractArgumentsScreen
           ExtractArgumentsScreen.routeName: (context) => ExtractArgumentsScreen(),
+          APage.routeName: (context) => APage(),
+          BPage.routeName: (context) => BPage(),
+          CPage.routeName: (context) => CPage(),
         },
       //监听路线
       onGenerateRoute: (v){
