@@ -1,29 +1,31 @@
 import 'package:flutter/material.dart';
+import 'Page3Navigator.dart';
+import 'PassArgumentsScreen.dart';
 class Page1Navigator extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme:ThemeData(
-        primaryColor: Colors.amber
-      ) ,
-      home: new Scaffold(
-          appBar: new AppBar(
-            title: new Text('标题'),
-          ),
-          body:Theme(
-              data: ThemeData(
+    return new Scaffold(
+        body:Theme(
+            data: ThemeData(
                 primaryColor: Colors.black
-              ),
-              child:WidgetTheme()
-          )
-      ),
+            ),
+            child:WidgetTheme()
+        )
     );
   }
 }
 class WidgetTheme extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Container(color: Theme.of(context).primaryColor,);
+    return Container(
+      child: RaisedButton(
+          onPressed: (){
+            Navigator.pushNamed(context, PassArgumentsScreen.routeName,arguments:{
+              "name":"张三",
+              "age":5
+            });
+          }),
+    );
   }
 }
 
