@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'flutter/PageTest.dart';
 import 'flutter/PageAnnimation.dart';
+import 'flutter/WebViewPage2.dart';
+import 'flutter/WebViewPage.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -40,7 +42,7 @@ class Home extends  StatelessWidget{
   @override
   Widget build(BuildContext context) {//此时的context=MyApp
     return  new Scaffold(
-        body:PageTest()
+        body:WebViewPage2()
     );
   }
 }
