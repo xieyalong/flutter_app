@@ -1,36 +1,38 @@
-
 import 'dart:async';
-
 import 'package:shared_preferences/shared_preferences.dart';
-
-//export 'package:flutter_go/resources/shared_preferences_keys.dart';
-
-/// 用来做shared_preferences的存储
+/*
+ 用来做shared_preferences的存储
+ import 'package:flutter_app/util/SpUtil.dart';
+  onPressed: () async{
+              SpUtil sp=await SpUtil.getInstance();
+              sp.putString("l_key", "张三");
+              print("str=${sp.get("l_key")}");
+            }
+  */
 class SpUtil {
+   SharedPreferences _spf;
   static SpUtil _instance;
-  static Future<SpUtil> get instance async {
-    return await getInstance();
+  //实例化
+   SpUtil._();
+  static Future<SpUtil> getInstance() async  {
+    if (_instance == null) {
+      _instance = new SpUtil._();
+      await _instance._init();
+    }
+    return _instance;
   }
 
-  static SharedPreferences _spf;
+//  static Future<SpUtil> get instance async {
+//    return await getInstance();
+//  }
 
 
-  SpUtil._();
 
   Future _init() async {
     _spf = await SharedPreferences.getInstance();
   }
 
-  static Future<SpUtil> getInstance() async  {
-    if (_instance == null) {
-      _instance = new SpUtil._();
-      await _instance._init();
-
-    }
-    return _instance;
-  }
-
-  static bool _beforeCheck() {
+   bool _beforeCheck() {
     if (_spf == null) {
       return true;
     }

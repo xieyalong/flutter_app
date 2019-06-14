@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:localstorage/localstorage.dart';
-import 'UtilSP.dart';
-import 'SpUtil.dart';
+import 'package:flutter_app/util/SpUtil.dart';
 class SharedPreferencesPage extends StatelessWidget {
   //静态属性
   static const routeName = '/SharedPreferences';
@@ -28,8 +27,10 @@ class SharedPreferencesPage extends StatelessWidget {
         ),
         body:RaisedButton(
             child: Text('下一步'),
-            onPressed: (){
-              SpUtil.getInstance()
+            onPressed: () async{
+              SpUtil sp=await SpUtil.getInstance();
+              sp.putString("l_key", "张三");
+              print("str=${sp.get("l_key")}");
             }
         )
     );
