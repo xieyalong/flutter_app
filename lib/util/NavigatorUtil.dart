@@ -15,4 +15,10 @@ class NavigatorUtil{
   void pop(BuildContext context){
     Navigator.pop(context);
   }
+  /*
+  NavigatorUtil.getInstance().pushNamed(context, routeName,arguments: {'id':34,'name':'张三'});
+   */
+  void pushNamed(BuildContext context, String routeName,{Object arguments,}){
+    Navigator.pushNamed(context, routeName,arguments: arguments);
+  }
 }
