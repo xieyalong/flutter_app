@@ -15,6 +15,7 @@ import 'flutter/JsonPage.dart';
 import 'flutter/ScreenArguments.dart';
 import 'package:fluro/fluro.dart';
 import 'util/NavigatorUtil.dart';
+import 'package:flutter_app/util/NavigatorUtil.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -56,7 +57,16 @@ class Home extends  StatelessWidget{
       body:RaisedButton(
           child: Text('跳转页面'),
           onPressed: (){
-            NavigatorUtil.getInstance().push(context, JsonPage());
+            Map<String,String> map=new Map();
+            map['a']='A';
+            map['b']='B';
+            NavigatorUtil.getInstance().pushNamed(context,
+                ExtractArgumentsScreen.routeName,
+                arguments: {
+              'id':34,'name':'李四','is':true,'data':map
+            });
+
+//            NavigatorUtil.getInstance().push(context, JsonPage());
 //            Navigator.push(context, MaterialPageRoute(builder: (context)=>JsonPage()));
 //            Navigator.pushNamed(
 //              context,

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class NavigatorUtil{
   static NavigatorUtil _instance;
@@ -21,4 +20,12 @@ class NavigatorUtil{
   void pushNamed(BuildContext context, String routeName,{Object arguments,}){
     Navigator.pushNamed(context, routeName,arguments: arguments);
   }
+  /*
+  获取pushNamed的数据
+   final  Map<String,Object> map= ModalRoute.of(context).settings.arguments;
+   */
+  dynamic getPushNamedData(BuildContext context){
+    return ModalRoute.of(context).settings.arguments;
+  }
+
 }
