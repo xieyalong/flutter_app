@@ -21,4 +21,48 @@ class LsUtil{
   dynamic getItem(String key) {
     return  storage.getItem(key);
   }
+  Future<void> setInt(String key,value, [Object toEncodable(Object nonEncodable),]){
+    storage.setItem(key, value);
+  }
+  int getInt(String key) {
+    try{
+      return storage.getItem(key);
+    }catch(e){
+      print(">]error=${e.toString()}");
+      return  0;
+    }
+  }
+  Future<void> setString(String key,value, [Object toEncodable(Object nonEncodable),]){
+    storage.setItem(key, value);
+  }
+  String getString(String key) {
+    try{
+      return storage.getItem(key);
+    }catch(e){
+      print(">]error=${e.toString()}");
+      return  null;
+    }
+  }
+  Future<void> setDouble(String key,value, [Object toEncodable(Object nonEncodable),]){
+    storage.setItem(key, value);
+  }
+  double getDouble(String key) {
+    try{
+      return storage.getItem(key);
+    }catch(e){
+      print(">]error=${e.toString()}");
+      return  0.0;
+    }
+  }
+  Future<void> setBool(String key,value, [Object toEncodable(Object nonEncodable),]){
+    storage.setItem(key, value);
+  }
+  bool getBool(String key) {
+    try{
+      return storage.getItem(key);
+    }catch(e){
+      print(">]error=${e.toString()}");
+      return  null;
+    }
+  }
 }

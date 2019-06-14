@@ -32,8 +32,12 @@ class SharedPreferencesPage extends StatelessWidget {
 //              SpUtil sp=await SpUtil.getInstance();
 //              sp.putString("l_key", "张三");
 //              print("str=${sp.get("l_key")}");
-              LsUtil.getInstance().setItem("aa", "bbbbAAAAA");
-              print(">]"+LsUtil.getInstance().getItem("aa"));
+//              LsUtil.getInstance().setItem("aa", "bbbbAAAAA");
+//              print(">]"+LsUtil.getInstance().getItem("aa"));
+              LsUtil.getInstance().setBool("b", true);
+              print(">]1=${LsUtil.getInstance().getBool("b")}");
+              LsUtil.getInstance().setString("s", 'ssssssss');
+              print(">]2=${LsUtil.getInstance().getString('s')}");
             }
         )
     );
