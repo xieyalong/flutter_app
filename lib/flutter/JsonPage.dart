@@ -22,7 +22,7 @@ class JsonPage extends StatelessWidget {
                 onPressed: () async{
                   String strData='{"a":"AA","b":"BAAAA","c":45,"g":"L"}';
                   dynamic json=JsonUtil.getInstance().toStringJson(strData);
-                  print(json['g']);
+                  print(json);
                 }
             ),
             RaisedButton(
