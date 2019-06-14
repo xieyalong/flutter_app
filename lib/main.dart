@@ -37,8 +37,8 @@ class MyApp extends  StatelessWidget{
       //监听路线
       onGenerateRoute: (v){
         //routes里面注册的routeName
-        print('跳转的页面=${v.name}');
-        print('传递的数据=${ v.arguments}');
+        print('>]跳转的页面=${v.name}');
+        print('>]传递的数据=${ v.arguments}');
       },
       home: new Scaffold(
         appBar: new AppBar(
@@ -56,17 +56,17 @@ class Home extends  StatelessWidget{
     return  new Scaffold(
       body:RaisedButton(
           child: Text('跳转页面'),
-          onPressed: ()async{
-            NavigatorUtil.getInstance().push(context, new ExtractArgumentsScreen({'id':4,'name':'ssssss'})).then((Object obj){
-             if(null!=obj){
-               print(">]-----返回的数据=${obj}");
-             }
-           });
-//           NavigatorUtil.getInstance().pushNamed(context, ExtractArgumentsScreen.routeName,arguments: map).then((Object obj){
+          onPressed: (){
+//            NavigatorUtil.getInstance().push(context, new ExtractArgumentsScreen({'id':4,'name':'ssssss'})).then((Object obj){
 //             if(null!=obj){
 //               print(">]-----返回的数据=${obj}");
 //             }
 //           });
+           NavigatorUtil.getInstance().pushNamed(context, ExtractArgumentsScreen.routeName,arguments: {'id':4,'name':'aass'}).then((Object obj){
+             if(null!=obj){
+               print(">]-----返回的数据=${obj}");
+             }
+           });
 
 //            var map2 = await Navigator.push(context,
 //                new MaterialPageRoute(builder: (context) => new ExtractArgumentsScreen(map)),
