@@ -56,22 +56,12 @@ class Home extends  StatelessWidget{
     return  new Scaffold(
       body:RaisedButton(
           child: Text('跳转页面'),
-          onPressed: (){
-            Map<String,String> map=new Map();
+          onPressed: ()async{
+            Map<String,Object> map=new Map();
             map['a']='A';
             map['b']='B';
-            NavigatorUtil.getInstance().pushNamed(context,
-                ExtractArgumentsScreen.routeName,
-                arguments: {
-              'id':34,'name':'李四','is':true,'data':map
-            });
-
-//            NavigatorUtil.getInstance().push(context, JsonPage());
-//            Navigator.push(context, MaterialPageRoute(builder: (context)=>JsonPage()));
-//            Navigator.pushNamed(
-//              context,
-//              JsonPage.routeName,
-//            );
+            var map2=await  NavigatorUtil.getInstance().push(context, new ExtractArgumentsScreen(map: map,));
+            print(">]返回的数据=${map2}");
           }
       ),
     );

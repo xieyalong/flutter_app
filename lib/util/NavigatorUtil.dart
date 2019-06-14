@@ -8,11 +8,25 @@ class NavigatorUtil{
     }
     return _instance;
   }
-  void push(BuildContext context,Widget widget){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>widget));
+  /*
+         ()async{
+            Map<String,Object> map=new Map();
+            map['a']='A';
+            map['b']='B';
+            var map2=await  NavigatorUtil.getInstance().push(context, new ExtractArgumentsScreen(map: map,));
+            print(">]返回的数据=${map2}");
+          }
+          //回调数据
+          NavigatorUtil.getInstance().pop(context,{'id':9,'name':'李四'});
+   */
+  Future<T> push<T extends Object>(BuildContext context,Widget widget) {
+    return Navigator.of(context).push(MaterialPageRoute(builder: (context)=>widget));
   }
-  void pop(BuildContext context){
-    Navigator.pop(context);
+  /*
+  NavigatorUtil.getInstance().pop(context,arguments: {'id':8});
+   */
+  bool pop<T extends Object>(BuildContext context, [ T result ]){
+    Navigator.pop(context,result);
   }
   /*
   NavigatorUtil.getInstance().pushNamed(context, routeName,arguments: {'id':34,'name':'张三'});
