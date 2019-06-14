@@ -58,11 +58,17 @@ class Home extends  StatelessWidget{
           child: Text('跳转页面'),
           onPressed: ()async{
             Map<String,Object> map=new Map();
-            map['a']='Awww';
-            map['b']='Bffff';
+            map['a']='Awww----';
+            map['b']='Bffffdddd';
 //            var map2=await  NavigatorUtil.getInstance().push(context, new ExtractArgumentsScreen(map: map,));
-            var map2=await NavigatorUtil.getInstance().pushNamed(context, ExtractArgumentsScreen.routeName,arguments: map);
-            print(">]-----返回的数据=${map2}");
+           NavigatorUtil.getInstance().pushNamed(context, ExtractArgumentsScreen.routeName,arguments: map).then((obj){
+             print(">]-----返回的数据=${obj}");
+           });
+
+//            var map2 = await Navigator.push(context,
+//                new MaterialPageRoute(builder: (context) => new ExtractArgumentsScreen(map)),
+//            );
+//            print(">]-----返回的数据=${map2}");
           }
       ),
     );

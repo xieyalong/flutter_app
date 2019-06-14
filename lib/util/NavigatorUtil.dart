@@ -32,6 +32,10 @@ class NavigatorUtil{
   }
   /*
   NavigatorUtil.getInstance().pushNamed(context, routeName,arguments: {'id':34,'name':'张三'});
+    NavigatorUtil.getInstance().pushNamed(context, ExtractArgumentsScreen.routeName,arguments: map).then((obj){
+             print(">]-----返回的数据=${obj}");
+           });
+           NavigatorUtil.getInstance().pop(context,{'id':9,'name':'李四rrrr'});
    */
   Future<T> pushNamed<T extends Object>(BuildContext context, String routeName,{Object arguments,}){
     Navigator.pushNamed(context, routeName,arguments: arguments);
