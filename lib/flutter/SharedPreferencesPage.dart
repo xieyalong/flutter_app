@@ -40,7 +40,9 @@ class SharedPreferencesPage extends StatelessWidget {
             RaisedButton(
                 child: Text('创建2'),
                 onPressed: () async{
-
+                  LsUtil.getInstance().newLs("a_key").clear();
+                  print('>]'+LsUtil.getInstance().newLs("a_key").getItem('b'));
+                  print('>]ssss');
                 }
             )
           ],

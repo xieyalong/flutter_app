@@ -11,8 +11,10 @@ import 'flutter/Page3Navigator.dart';
 import 'flutter/PassArgumentsScreen.dart';
 import 'flutter/ExtractArgumentsScreen.dart';
 import 'flutter/SharedPreferencesPage.dart';
+import 'flutter/JsonPage.dart';
 import 'flutter/ScreenArguments.dart';
 import 'package:fluro/fluro.dart';
+import 'util/NavigatorUtil.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -27,7 +29,10 @@ class MyApp extends  StatelessWidget{
         PassArgumentsScreen.routeName: (context) => PassArgumentsScreen(),
         //数据存储
         SharedPreferencesPage.routeName:(context) => SharedPreferencesPage(),
+        //json处理
+//        JsonPage.routeName:(context) => JsonPage(),
       },
+//      initialRoute: JsonPage.routeName,
       //监听路线
       onGenerateRoute: (v){
         //routes里面注册的routeName
@@ -51,10 +56,12 @@ class Home extends  StatelessWidget{
       body:RaisedButton(
           child: Text('跳转页面'),
           onPressed: (){
-            Navigator.pushNamed(
-              context,
-              SharedPreferencesPage.routeName,
-            );
+            NavigatorUtil.getInstance().push(context, JsonPage());
+//            Navigator.push(context, MaterialPageRoute(builder: (context)=>JsonPage()));
+//            Navigator.pushNamed(
+//              context,
+//              JsonPage.routeName,
+//            );
           }
       ),
     );
