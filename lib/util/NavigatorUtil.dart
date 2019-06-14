@@ -10,14 +10,13 @@ class NavigatorUtil{
   }
   /*
      Map<String,dynamic> map;
-    ExtractArgumentsScreen({this.map});
-         ()async{
-            Map<String,Object> map=new Map();
-            map['a']='A';
-            map['b']='B';
-            var map2=await  NavigatorUtil.getInstance().push(context, new ExtractArgumentsScreen(map: map,));
-            print(">]返回的数据=${map2}");
-          }
+     ExtractArgumentsScreen([this.map]);
+
+                  NavigatorUtil.getInstance().push(context, new ExtractArgumentsScreen({'id':4,'name':'ssssss'})).then((Object obj){
+             if(null!=obj){
+               print(">]-----返回的数据=${obj}");
+             }
+           });
           //回调数据
           NavigatorUtil.getInstance().pop(context,{'id':9,'name':'李四'});
    */
@@ -31,10 +30,12 @@ class NavigatorUtil{
     Navigator.pop(context,result);
   }
   /*
-  NavigatorUtil.getInstance().pushNamed(context, routeName,arguments: {'id':34,'name':'张三'});
-    NavigatorUtil.getInstance().pushNamed(context, ExtractArgumentsScreen.routeName,arguments: map).then((obj){
-             print(">]-----返回的数据=${obj}");
+   NavigatorUtil.getInstance().pushNamed(context, ExtractArgumentsScreen.routeName,arguments: {'id':4,'name':'ssssss'}).then((Object obj){
+             if(null!=obj){
+               print(">]-----返回的数据=${obj}");
+             }
            });
+           //数据回调
            NavigatorUtil.getInstance().pop(context,{'id':9,'name':'李四rrrr'});
    */
   Future<T> pushNamed<T extends Object>(BuildContext context, String routeName,{Object arguments,}){
