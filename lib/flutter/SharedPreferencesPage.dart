@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:localstorage/localstorage.dart';
 import 'package:flutter_app/util/SpUtil.dart';
+import 'package:flutter_app/util/LsUtil.dart';
 class SharedPreferencesPage extends StatelessWidget {
   //静态属性
   static const routeName = '/SharedPreferences';
@@ -13,7 +14,7 @@ class SharedPreferencesPage extends StatelessWidget {
   }
   _incrementCounter2() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-   int  _int= await prefs.getInt('counter');
+    int  _int= await prefs.getInt('counter');
     print(_int);
   }
   final LocalStorage storage = new LocalStorage('some_key');
@@ -28,9 +29,11 @@ class SharedPreferencesPage extends StatelessWidget {
         body:RaisedButton(
             child: Text('下一步'),
             onPressed: () async{
-              SpUtil sp=await SpUtil.getInstance();
-              sp.putString("l_key", "张三");
-              print("str=${sp.get("l_key")}");
+//              SpUtil sp=await SpUtil.getInstance();
+//              sp.putString("l_key", "张三");
+//              print("str=${sp.get("l_key")}");
+              LsUtil.getInstance().setItem("aa", "bbbbAAAAA");
+              print(LsUtil.getInstance().getItem("aa"));
             }
         )
     );

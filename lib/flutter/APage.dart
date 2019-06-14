@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'BPage.dart';
 class APage extends StatelessWidget {
   //静态属性
   static const routeName = '/APage';
