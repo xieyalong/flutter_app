@@ -62,7 +62,7 @@ class Home extends  StatelessWidget{
 //               print(">]-----返回的数据=${obj}");
 //             }
 //           });
-           NavigatorUtil.getInstance().pushNamed(context, ExtractArgumentsScreen.routeName,arguments: {'id':4,'name':'aass'}).then((Object obj){
+           NavigatorUtil.getInstance().pushNamed(context, ExtractArgumentsScreen.routeName,arguments: {'id':4,'name':'aass'}).then((dynamic obj){
              if(null!=obj){
                print(">]-----返回的数据=${obj}");
              }
