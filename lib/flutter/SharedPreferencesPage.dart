@@ -26,19 +26,25 @@ class SharedPreferencesPage extends StatelessWidget {
         appBar: AppBar(
           title: Text('a页面'),
         ),
-        body:RaisedButton(
-            child: Text('下一步'),
-            onPressed: () async{
-//              SpUtil sp=await SpUtil.getInstance();
-//              sp.putString("l_key", "张三");
-//              print("str=${sp.get("l_key")}");
-//              LsUtil.getInstance().setItem("aa", "bbbbAAAAA");
-//              print(">]"+LsUtil.getInstance().getItem("aa"));
-              LsUtil.getInstance().setBool("b", true);
-              print(">]1=${LsUtil.getInstance().getBool("b")}");
-              LsUtil.getInstance().setString("s", 'ssssssss');
-              print(">]2=${LsUtil.getInstance().getString('s')}");
-            }
+        body:Flex(
+            direction: Axis.vertical,
+          children: <Widget>[
+            RaisedButton(
+                child: Text('创建1'),
+                onPressed: () async{
+                LsUtil.getInstance().newLs("a_key");
+                LsUtil.getInstance().newLs("a_key").setItem("b",'BBBBFFFF');
+                print('>]'+LsUtil.getInstance().newLs("a_key").getItem('b'));
+                }
+            ),
+            RaisedButton(
+                child: Text('创建2'),
+                onPressed: () async{
+
+                }
+            )
+          ],
+
         )
     );
   }
