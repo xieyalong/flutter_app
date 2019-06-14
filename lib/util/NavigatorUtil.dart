@@ -9,6 +9,8 @@ class NavigatorUtil{
     return _instance;
   }
   /*
+     Map<String,dynamic> map;
+    ExtractArgumentsScreen({this.map});
          ()async{
             Map<String,Object> map=new Map();
             map['a']='A';
@@ -31,7 +33,7 @@ class NavigatorUtil{
   /*
   NavigatorUtil.getInstance().pushNamed(context, routeName,arguments: {'id':34,'name':'张三'});
    */
-  void pushNamed(BuildContext context, String routeName,{Object arguments,}){
+  Future<T> pushNamed<T extends Object>(BuildContext context, String routeName,{Object arguments,}){
     Navigator.pushNamed(context, routeName,arguments: arguments);
   }
   /*

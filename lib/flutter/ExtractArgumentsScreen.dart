@@ -7,8 +7,8 @@ class ExtractArgumentsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //获取数据-获取上个页面传递数据
-//    map= NavigatorUtil.getInstance().getPushNamedData(context);
-    print('>]----${map}');
+    map= NavigatorUtil.getInstance().getPushNamedData(context);
+//    print('>]----${map}');
     return Scaffold(
       appBar: AppBar(
         title: Text('${map}'),
