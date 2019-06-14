@@ -33,7 +33,7 @@ class SharedPreferencesPage extends StatelessWidget {
 //              sp.putString("l_key", "张三");
 //              print("str=${sp.get("l_key")}");
               LsUtil.getInstance().setItem("aa", "bbbbAAAAA");
-              print(LsUtil.getInstance().getItem("aa"));
+              print(">]"+LsUtil.getInstance().getItem("aa"));
             }
         )
     );

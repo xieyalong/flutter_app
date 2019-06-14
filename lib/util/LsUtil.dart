@@ -1,5 +1,6 @@
 import 'package:localstorage/localstorage.dart';
 /*
+ import 'package:flutter_app/util/LsUtil.dart';
    LsUtil.getInstance().setItem("aa", "bbbbAAAAA");
    LsUtil.getInstance().getItem("aa");
  */
