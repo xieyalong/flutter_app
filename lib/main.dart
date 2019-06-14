@@ -10,10 +10,8 @@ import 'flutter/Page2Navigator.dart';
 import 'flutter/Page3Navigator.dart';
 import 'flutter/PassArgumentsScreen.dart';
 import 'flutter/ExtractArgumentsScreen.dart';
+import 'flutter/SharedPreferencesPage.dart';
 import 'flutter/ScreenArguments.dart';
-import 'flutter/APage.dart';
-import 'flutter/BPage.dart';
-import 'flutter/CPage.dart';
 import 'package:fluro/fluro.dart';
 void main() => runApp(MyApp());
 
@@ -23,18 +21,18 @@ class MyApp extends  StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       //全局注册页面
-        routes: {
-          //ExtractArgumentsScreen
-          ExtractArgumentsScreen.routeName: (context) => ExtractArgumentsScreen(),
-          APage.routeName: (context) => APage(),
-          BPage.routeName: (context) => BPage(),
-          CPage.routeName: (context) => CPage(),
-        },
+      routes: {
+        //ExtractArgumentsScreen
+        ExtractArgumentsScreen.routeName: (context) => ExtractArgumentsScreen(),
+        PassArgumentsScreen.routeName: (context) => PassArgumentsScreen(),
+        //数据存储
+        SharedPreferencesPage.routeName:(context) => SharedPreferencesPage(),
+      },
       //监听路线
       onGenerateRoute: (v){
-          //routes里面注册的routeName
-          print('跳转的页面=${v.name}');
-          print('传递的数据=${ v.arguments}');
+        //routes里面注册的routeName
+        print('跳转的页面=${v.name}');
+        print('传递的数据=${ v.arguments}');
       },
       home: new Scaffold(
         appBar: new AppBar(
@@ -51,19 +49,16 @@ class Home extends  StatelessWidget{
   Widget build(BuildContext context) {
     return  new Scaffold(
       body:RaisedButton(
-        child: Text('跳转页面'),
+          child: Text('跳转页面'),
           onPressed: (){
             Navigator.pushNamed(
               context,
-              ExtractArgumentsScreen.routeName,
-              arguments: {
-                "title":'这是pushNamed',
-                "content":9090900
-              },
+              SharedPreferencesPage.routeName,
             );
           }
       ),
     );
   }
+
 }
 
