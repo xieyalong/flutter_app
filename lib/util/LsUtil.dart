@@ -77,10 +77,4 @@ class LsUtil{
   LocalStorage newLs(String lsKey){
     return new LocalStorage(lsKey);
   }
-  /*
-  清除新储存库
-   */
-  Future<void> clearLs(String lsKey) {
-    new LocalStorage(lsKey).clear();
-  }
 }
