@@ -1,6 +1,8 @@
 // ignore: uri_does_not_exist
 import 'package:package_info/package_info.dart';
-import 'JsonUtil.dart';
+/*
+获取包信息
+ */
 class PackageInfoUtil{
   PackageInfo packageInfo;
   static PackageInfoUtil _instance;
@@ -12,8 +14,8 @@ class PackageInfoUtil{
     }
     return _instance;
   }
-  //直接获取，需要提前实例化，第一次使用getAppName()会报错
-  void init()async{
+  //“_”私有 直接获取，需要提前实例化，第一次使用getAppName()会报错
+  void _init()async{
     packageInfo=await PackageInfo.fromPlatform();
   }
   String getAppName(){

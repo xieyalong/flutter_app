@@ -19,6 +19,8 @@ import 'package:flutter_app/util/NavigatorUtil.dart';
 //import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 //import 'package:package_info/package_info.dart';
 import 'util/PackageInfoUtil.dart';
+import 'util/DeviceInfoUtil.dart';
+import 'util/InitUtil.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -59,15 +61,13 @@ class MyApp extends  StatelessWidget{
 class Home extends  StatelessWidget{
   @override
   Widget build(BuildContext context) {
+    //先初始化
+    InitUtil.getInstance();
     return  new Scaffold(
       body:RaisedButton(
           child: Text('跳转页面'),
           onPressed: (){
-////           NavigatorUtil.getInstance().pushNamed(context, Page1Navigator.routeName);
-          PackageInfoUtil.getInstance().a();
-//            print('${PackageInfoUtil.getInstance().getAppName()}-+-${PackageInfoUtil.getInstance().getPackageName()
-//            }-+-${PackageInfoUtil.getInstance().getVersion()}-+-${PackageInfoUtil.getInstance().getBuildNumber()}');
-
+            print('>]---'+DeviceInfoUtil.getInstance().model()+'--'+DeviceInfoUtil.getInstance().brand());
           }
       ),
     );
