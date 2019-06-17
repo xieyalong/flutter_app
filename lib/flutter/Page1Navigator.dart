@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-import 'Page3Navigator.dart';
+import 'Page2Navigator.dart';
 import 'PassArgumentsScreen.dart';
+import '../util/NavigatorUtil.dart';
 class Page1Navigator extends StatelessWidget{
+  static const routeName = '/Page1Navigator';
   @override
   Widget build(BuildContext context) {
+    print('------page1------');
+    print( ModalRoute.of(context));
     return new Scaffold(
+        appBar: AppBar(title: Text('page1页面'),),
         body:Theme(
             data: ThemeData(
                 primaryColor: Colors.black
@@ -17,14 +22,14 @@ class Page1Navigator extends StatelessWidget{
 class WidgetTheme extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
+    print(ModalRoute.of(context));
     return Container(
       child: RaisedButton(
+          child: Text("page1页面"),
           onPressed: (){
-            Navigator.pushNamed(context, PassArgumentsScreen.routeName,arguments:{
-              "name":"张三",
-              "age":5
-            });
-          }),
+            NavigatorUtil.getInstance().pushNamed(context, Page2Navigator.routeName);
+          }
+      ),
     );
   }
 }

@@ -13,10 +13,10 @@ import 'flutter/ExtractArgumentsScreen.dart';
 import 'flutter/SharedPreferencesPage.dart';
 import 'flutter/JsonPage.dart';
 import 'flutter/ScreenArguments.dart';
-import 'package:fluro/fluro.dart';
+//import 'package:fluro/fluro.dart';
 import 'util/NavigatorUtil.dart';
 import 'package:flutter_app/util/NavigatorUtil.dart';
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+//import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -32,7 +32,10 @@ class MyApp extends  StatelessWidget{
         //数据存储
         SharedPreferencesPage.routeName:(context) => SharedPreferencesPage(),
         //json处理
-//        JsonPage.routeName:(context) => JsonPage(),
+        JsonPage.routeName:(context) => JsonPage(),
+        Page1Navigator.routeName:(context) => Page1Navigator(),
+        Page2Navigator.routeName:(context) => Page2Navigator(),
+        Page3Navigator.routeName:(context) => Page3Navigator(),
       },
 //      initialRoute: JsonPage.routeName,
       //监听路线
@@ -58,21 +61,7 @@ class Home extends  StatelessWidget{
       body:RaisedButton(
           child: Text('跳转页面'),
           onPressed: (){
-//            NavigatorUtil.getInstance().push(context, new ExtractArgumentsScreen({'id':4,'name':'ssssss'})).then((Object obj){
-//             if(null!=obj){
-//               print(">]-----返回的数据=${obj}");
-//             }
-//           });
-           NavigatorUtil.getInstance().pushNamed(context, ExtractArgumentsScreen.routeName,arguments: {'id':4,'name':'aass'}).then((dynamic obj){
-             if(null!=obj){
-               print(">]-----返回的数据=${obj}");
-             }
-           });
-
-//            var map2 = await Navigator.push(context,
-//                new MaterialPageRoute(builder: (context) => new ExtractArgumentsScreen(map)),
-//            );
-//            print(">]-----返回的数据=${map2}");
+           NavigatorUtil.getInstance().pushNamed(context, Page1Navigator.routeName);
           }
       ),
     );
