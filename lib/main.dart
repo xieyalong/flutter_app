@@ -21,6 +21,8 @@ import 'package:flutter_app/util/NavigatorUtil.dart';
 import 'util/PackageInfoUtil.dart';
 import 'util/DeviceInfoUtil.dart';
 import 'util/InitUtil.dart';
+import 'util/ToastUtil.dart';
+import 'util/SnackBarUtil.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -67,7 +69,7 @@ class Home extends  StatelessWidget{
       body:RaisedButton(
           child: Text('跳转页面'),
           onPressed: (){
-            print('>]---'+DeviceInfoUtil.getInstance().model()+'--'+DeviceInfoUtil.getInstance().brand());
+            SnackBarUtil.getInstance().error(context, "aaaaa");
           }
       ),
     );

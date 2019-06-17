@@ -10,7 +10,7 @@ class PackageInfoUtil{
   static PackageInfoUtil getInstance()   {
     if (_instance == null) {
       _instance = new PackageInfoUtil._();
-      _instance.init();
+      _instance._init();
     }
     return _instance;
   }

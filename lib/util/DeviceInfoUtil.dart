@@ -9,7 +9,7 @@ class DeviceInfoUtil{
   static DeviceInfoUtil getInstance()   {
     if (_instance == null) {
       _instance=DeviceInfoUtil._();
-      _instance.init();
+      _instance._init();
     }
     return _instance;
   }
