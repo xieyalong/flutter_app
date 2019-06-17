@@ -26,7 +26,7 @@ class Home extends StatelessWidget{
             arguments：传递数据
             result:不知道怎么使用
              */
-            Navigator.of(context).pushReplacementNamed(Page1Navigator.routeName,result: {'name':'李四'},arguments: ['a',true,45]);
+//            Navigator.of(context).pushReplacementNamed(Page1Navigator.routeName,result: {'name':'李四'},arguments: ['a',true,45]);
 //            Navigator.of(context).pushReplacement(new MaterialPageRoute(builder: (context){
 //              return Page1Navigator();
 //            }),result: {'name':'张三'});

@@ -11,7 +11,7 @@ description: A new Flutter application.
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 2.0.6+20
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -38,16 +38,18 @@ dependencies:
   #"^"表明使用小版本的更新，保存会自动下载这个需要的包
   scoped_model:
   intl:
-  http:
+  # http:
+  http: ^0.12.0+2
   crypto:
+  #App信息
+  package_info: ^0.4.0+4
   #---------------------------------
   #查找文件系统上常用位置
   #^1.1.0
 #  path_provider:
 #  #云存储#
 #  firebase_storage: ^3.0.1
-#  #App信息
-#  package_info: ^0.4.0+4
+
 #  #设备
 #  device_info: ^0.4.0+2
 #  #视频
