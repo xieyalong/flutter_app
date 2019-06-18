@@ -24,7 +24,8 @@ import 'util/InitUtil.dart';
 import 'util/ToastUtil.dart';
 import 'util/SnackBarUtil.dart';
 import 'util/PickerUtil.dart';
-//import 'flutter/PickerPage.dart';
+import 'flutter/PickerPage.dart';
+import 'flutter/Pull_to_refreshPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -47,6 +48,8 @@ class MyApp extends  StatelessWidget{
         Page3Navigator.routeName:(context) => Page3Navigator(),
         //选择器-可自定义内容
         PickerPage.routeName:(context) => PickerPage(),
+        //上拉刷新下拉加载
+        Pull_to_refreshPage.routeName:(context) => Pull_to_refreshPage(),
       },
 //      initialRoute: JsonPage.routeName,
       //监听路线
@@ -74,7 +77,7 @@ class Home extends  StatelessWidget{
       body:RaisedButton(
           child: Text('跳转页面'),
           onPressed: (){
-            NavigatorUtil.getInstance().pushNamed(context,PickerPage.routeName);
+            NavigatorUtil.getInstance().pushNamed(context,Pull_to_refreshPage.routeName);
           }
       ),
     );
