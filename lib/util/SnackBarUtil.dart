@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+/*
+弹出框
+ */
 class SnackBarUtil{
   static SnackBarUtil _instance;
   SnackBarUtil._();

@@ -1,5 +1,8 @@
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/material.dart';
+/*
+弹出框
+ */
 class ToastUtil{
   static ToastUtil _instance;
   ToastUtil._();

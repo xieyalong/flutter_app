@@ -23,6 +23,9 @@ import 'util/DeviceInfoUtil.dart';
 import 'util/InitUtil.dart';
 import 'util/ToastUtil.dart';
 import 'util/SnackBarUtil.dart';
+import 'util/PickerUtil.dart';
+//import 'flutter/PickerPage.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -42,6 +45,8 @@ class MyApp extends  StatelessWidget{
         Page1Navigator.routeName:(context) => Page1Navigator(),
         Page2Navigator.routeName:(context) => Page2Navigator(),
         Page3Navigator.routeName:(context) => Page3Navigator(),
+        //选择器-可自定义内容
+        PickerPage.routeName:(context) => PickerPage(),
       },
 //      initialRoute: JsonPage.routeName,
       //监听路线
@@ -69,7 +74,7 @@ class Home extends  StatelessWidget{
       body:RaisedButton(
           child: Text('跳转页面'),
           onPressed: (){
-            SnackBarUtil.getInstance().error(context, "aaaaa");
+            NavigatorUtil.getInstance().pushNamed(context,PickerPage.routeName);
           }
       ),
     );
