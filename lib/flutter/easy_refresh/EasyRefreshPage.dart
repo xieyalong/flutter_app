@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:async/async.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 class EasyRefreshPage extends StatefulWidget{
   static String  routeName = '/EasyRefreshPage';
@@ -37,7 +36,4 @@ class _EasyRefreshPage extends State<EasyRefreshPage>{
       ),
     );
   }
-}
-class MaterialHeader extends StatelessWidget{
-
 }
