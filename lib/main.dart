@@ -26,6 +26,7 @@ import 'util/SnackBarUtil.dart';
 import 'util/PickerUtil.dart';
 import 'flutter/PickerPage.dart';
 import 'flutter/easy_refresh/EasyRefreshPage.dart';
+import 'flutter/easy_refresh/EasyRefreshPage2.dart';
 // ignore: uri_does_not_exist
 void main() => runApp(MyApp());
 
@@ -49,9 +50,9 @@ class MyApp extends  StatelessWidget{
         //选择器-可自定义内容
         PickerPage.routeName:(context) => PickerPage(),
         //上拉刷新下拉加载ScreenPage同一个
-//        Pull_to_refreshPage.routeName:(context) => Pull_to_refreshPage(),
-//        ScreenPage.routeName:(context) => ScreenPage(),
         EasyRefreshPage.routeName:(context) => EasyRefreshPage(),
+//        拉伸回弹-下拉回弹 
+        EasyRefreshPage2.routeName:(context) => EasyRefreshPage2(),
       },
 //      initialRoute: JsonPage.routeName,
       //监听路线
@@ -79,7 +80,7 @@ class Home extends  StatelessWidget{
       body:RaisedButton(
           child: Text('跳转页面'),
           onPressed: (){
-            NavigatorUtil.getInstance().pushNamed(context,EasyRefreshPage.routeName);
+            NavigatorUtil.getInstance().pushNamed(context,EasyRefreshPage2.routeName);
           }
       ),
     );
