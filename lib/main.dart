@@ -51,7 +51,7 @@ class MyApp extends  StatelessWidget{
         PickerPage.routeName:(context) => PickerPage(),
         //上拉刷新下拉加载ScreenPage同一个
         EasyRefreshPage.routeName:(context) => EasyRefreshPage(),
-//        拉伸回弹-下拉回弹 
+//        拉伸回弹-下拉回弹
         EasyRefreshPage2.routeName:(context) => EasyRefreshPage2(),
       },
 //      initialRoute: JsonPage.routeName,
