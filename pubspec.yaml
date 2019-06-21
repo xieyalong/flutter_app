@@ -26,6 +26,8 @@ dependencies:
   #下拉刷新
   pull_to_refresh: ^1.4.4
   flutter_easyrefresh: ^1.2.7
+  #通讯-通信
+  flutter_socket_io: ^0.4.7
    #选择器
 #  flutter_picker:
 #      git: git://github.com/yangyxd/flutter_picker.git
